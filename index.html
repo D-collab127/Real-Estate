@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="#" class="logo">Livin' Dream</a>
+            <ul class="menu-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <!-- <li><a href="#">Blogs</a></li> -->
+                <li><a href="#" id="enquireLink">Enquire</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+
+                <p class="hero-label">CURATED LIVING SPACES</p>
+
+                <h1>
+                    A PLACE TO<br>
+                    CALL YOUR OWN.
+                </h1>
+
+                <p class="hero-description">
+                    Discover distinctive homes designed for
+                    the way you want to live.
+                </p>
+
+                <a href="#" class="hero-button">
+                    Explore Properties →
+                </a>
+
+            </div>
+        </section>
+        <section class="destinations" id="projects">
+            <div class="section-heading">
+                <p>CURATED ESCAPES</p>
+                <h2>Places worth dreaming about.</h2>
+            </div>
+
+            <div class="destination-scroll">
+
+                <article class="destination-card">
+                    <img src="Images\house1.jpg" alt="Paris">
+                    <div class="destination-info">
+                        <span>ECR GRAND RESIDENCY</span>
+                        <h3>Injambakkam, East Coast Road, Chennai - 600 115</h3>
+                        <p>A contemporary villa with a private pool and glass-panelled interiors, minutes from the coast — designed for effortless indoor-outdoor living.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <img src="Images\house2.jpg" alt="Santorini">
+                    <div class="destination-info">
+                        <span>PALM GROVE VILLAS</span>
+                        <h3>Sholinganallur, OMR, Chennai - 600 119</h3>
+                        <p>A sun-lit villa community along OMR featuring dual pool decks, landscaped courtyards, and resort-style terraces for evening gatherings.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <img src="Images\house3.jpg" alt="Kyoto">
+                    <div class="destination-info">
+                        <span>VANDALUR HILLS ESTATE</span>
+                        <h3>Vandalur-Walajabad Highway, Kancheepuram District - 600 048</h3>
+                        <p>A secluded hillside estate surrounded by dense green cover, with a rooftop terrace, private pool, and sweeping views at sunset.</p>
+                        <a href="#">View Project →</a>                    </div>
+                <!-- </article>
+                <article class="destination-card">
+                    <img src="Images\house4.jpg" alt="Kyoto">
+                    <div class="destination-info">
+                        <span>LAKEVIEW GREENS RESIDENCY</span>
+                        <h3>Perumbakkam, Off OMR, Chennai - 600 100</h3>
+                        <p>A gated waterfront community with tree-lined walkways and lake-facing balconies, offering a quiet retreat just off the city's tech corridor.</p>
+                        <a href="#">View Project →</a>                    </div>
+                </article>
+                <article class="destination-card">
+                    <img src="Images\house5.jpg" alt="Kyoto">
+                    <div class="destination-info">
+                        <span>COROMANDEL COURTYARD</span>
+                        <h3>Neelankarai, East Coast Road, Chennai - 600 041</h3>
+                        <p>A beachside residence with open courtyards and weathered stone façades, blending coastal charm with contemporary comfort.</p>
+                        <a href="#">View Project →</a>                    </div>
+                </article> -->
+                
+
+            </div>
+        </section>
+                <!-- Enquiry overlay + panel -->
+        <div class="enquiry-overlay" id="enquiryOverlay"></div>
+
+        <div class="enquiry-panel" id="enquiryPanel">
+            <button class="enquiry-close" id="enquiryClose">×</button>
+
+            <h2>Enquire Now</h2>
+            <p class="enquiry-subtext">Tell us a bit about what you're looking for.</p>
+
+            <form class="enquiry-form">
+                <label>
+                    Project
+                    <select name="project" required>
+                        <option value="" disabled selected>Select a project</option>
+                        <option value="ecr-grand-residency">ECR Grand Residency</option>
+                        <option value="palm-grove-villas">Palm Grove Villas</option>
+                        <option value="vandalur-hills-estate">Vandalur Hills Estate</option>
+                    </select>
+                </label>
+
+                <label>
+                    Full Name
+                    <input type="text" name="fullname" placeholder="Enter your full name" required>
+                </label>
+
+                <label>
+                    Phone Number
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </label>
+
+                <button type="submit" class="enquiry-submit">Submit Enquiry</button>
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
+        

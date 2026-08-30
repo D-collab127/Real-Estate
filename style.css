@@ -1,0 +1,345 @@
+:root {
+    --primary: #3E2723;      /* Deep brown */
+    --secondary: #D4A373;    /* Caramel / tan */
+    --accent: #8D6E63;       /* Muted brown */
+    --highlight: #FFE0B2;    /* Light peach */
+    --background: #FFF3E0;   /* Warm cream */
+    --text: #2B211E;         /* Dark brown */
+}
+/* General page styling */
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo {
+    color: var(--highlight);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-links {
+    display: flex;
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    gap: 10px;
+}
+
+.menu-links a {
+    color: var(--background);
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.menu-links a:hover {
+    color: var(--secondary);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.hero {
+    position: relative;
+    height: calc(100vh - 70px);
+
+    background-image: url("Images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(62, 39, 35, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    color: var(--background);
+}
+
+.hero-label {
+    color: var(--highlight);
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 72px;
+    line-height: 1;
+    margin: 0 0 25px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 25px;
+
+    background-color: var(--secondary);
+    color: var(--primary);
+
+    text-decoration: none;
+}
+
+
+.destinations {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 8%;
+}
+
+.section-heading p {
+    color: var(--accent);
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin: 0;
+    color: var(--primary);
+}
+
+.destinations {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 8%;
+}
+
+.section-heading p {
+    color: var(--accent);
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin: 0;
+    color: var(--primary);
+}
+
+
+.destinations {
+    padding: 40px 0 80px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 8%;
+}
+
+.section-heading p {
+    color: var(--accent);
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin: 0;
+    color: var(--primary);
+}
+
+.destination-scroll {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    justify-content: center;
+}
+
+.destination-card {
+    flex: 0 0 380px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-info {
+    padding: 20px;
+}
+
+.destination-info span {
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.destination-info h3 {
+    margin: 10px 0;
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.destination-info p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.destination-info a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Overlay */
+.enquiry-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}
+
+.enquiry-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Sliding panel */
+.enquiry-panel {
+    position: fixed;
+    top: 0;
+    right: 0;              /* was left: 0 */
+    height: 100%;
+    width: 380px;
+    max-width: 85vw;
+    background-color: var(--background);
+    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.2);   /* flipped shadow direction */
+    z-index: 999;
+
+    padding: 40px 30px;
+    box-sizing: border-box;
+
+    transform: translateX(100%);   /* was -100%, now slides in from the right */
+    transition: transform 0.35s ease;
+
+    overflow-y: auto;
+}
+
+.enquiry-panel.active {
+    transform: translateX(0);
+}
+
+.enquiry-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.enquiry-panel h2 {
+    color: var(--primary);
+    margin: 0 0 10px;
+    font-size: 26px;
+}
+
+.enquiry-subtext {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.enquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.enquiry-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--primary);
+    font-weight: bold;
+    gap: 8px;
+}
+
+.enquiry-form input,
+.enquiry-form select {
+    padding: 12px;
+    border: 1px solid var(--accent);
+    background-color: #fff;
+    color: var(--text);
+    font-size: 15px;
+    font-family: inherit;
+    border-radius: 4px;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.enquiry-submit {
+    margin-top: 10px;
+    padding: 14px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.enquiry-submit:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
