@@ -1,3 +1,4 @@
+
 // const wrapper = document.querySelector('.scroll-pin-wrapper');
 // const track = document.querySelector('.destination-scroll');
 
@@ -49,3 +50,27 @@ function closeEnquiry() {
 enquireLink.addEventListener('click', openEnquiry);
 enquiryClose.addEventListener('click', closeEnquiry);
 enquiryOverlay.addEventListener('click', closeEnquiry);
+
+const enquiryForm = document.getElementById('enquiryForm');
+
+enquiryForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // stop the page from reloading/navigating away
+
+    const formData = new FormData(enquiryForm);
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            enquiryForm.innerHTML = '<p style="color:var(--primary);font-weight:bold;">Thanks — we\'ll be in touch shortly.</p>';
+        } else {
+            alert('Something went wrong. Please try again or call us directly.');
+        }
+    })
+    .catch(() => {
+        alert('Something went wrong. Please try again or call us directly.');
+    });
+});

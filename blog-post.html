@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>What DTCP approval actually protects you from — Walnut Live Space</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="Images/Nadivine-Logo1.png" alt="Nadivine Logo">
+            </a>
+            <ul class="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="#" id="enquireLink">Enquire</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-hero" style="padding-bottom:30px;">
+            <p>BUYING GUIDE</p>
+            <h1 style="font-size:36px;">What DTCP approval actually protects you from</h1>
+            <div class="blog-meta" style="color:var(--background);opacity:0.7;">6 min read · Aug 2026</div>
+        </div>
+
+        <div class="blog-post-hero">
+            <img src="Images/blog-1.jpg" alt="">
+        </div>
+
+        <div class="blog-post-body">
+            <p>DTCP approval confirms that a layout has cleared planning review before a single plot is sold, covering road widths, drainage, and open space reservation.</p>
+            <p>For a buyer, this is the difference between a plot with a clean paper trail and one that could face demolition or access disputes years later.</p>
+            <p>This is placeholder body copy — replace with the real article before this page goes live.</p>
+            <a href="blog.html" style="color:var(--primary);font-weight:bold;text-decoration:none;">&larr; Back to journal</a>
+        </div>
+
+        <!-- Enquiry overlay + panel -->
+        <div class="enquiry-overlay" id="enquiryOverlay"></div>
+
+        <div class="enquiry-panel" id="enquiryPanel">
+            <button class="enquiry-close" id="enquiryClose">×</button>
+
+            <h2>Enquire Now</h2>
+            <p class="enquiry-subtext">Tell us a bit about what you're looking for.</p>
+
+            <form class="enquiry-form">
+                <label>
+                    Project
+                    <select name="project" required>
+                        <option value="" disabled selected>Select a project</option>
+                        <option value="ecr-grand-residency">ECR Grand Residency</option>
+                        <option value="palm-grove-villas">Palm Grove Villas</option>
+                        <option value="vandalur-hills-estate">Vandalur Hills Estate</option>
+                    </select>
+                </label>
+
+                <label>
+                    Full Name
+                    <input type="text" name="fullname" placeholder="Enter your full name" required>
+                </label>
+
+                <label>
+                    Phone Number
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </label>
+
+                <button type="submit" class="enquiry-submit">Submit Enquiry</button>
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 60);
+            });
+        </script>
+    </body>
+</html>

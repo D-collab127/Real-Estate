@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact — Walnut Live Space</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="Images/Nadivine-Logo1.png" alt="Nadivine Logo">
+            </a>
+            <ul class="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="#" id="enquireLink">Enquire</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-hero">
+            <p>CONTACT</p>
+            <h1>Let's find you the right plot</h1>
+            <div class="subtext">Send an enquiry and the sales team will get back to you within one business day, or call in directly below.</div>
+        </div>
+
+        <div class="contact-grid">
+            <div>
+                <div class="contact-info-item">
+                    <div><b>Email</b><span>sales@walnutlivespace.com</span></div>
+                </div>
+                <div class="contact-info-item">
+                    <div><b>Phone</b><span>+91 73388 22222</span></div>
+                </div>
+                <div class="contact-info-item">
+                    <div><b>Site address</b><span>Walnut Live Space, off SH 48, near the SIPCOT industrial park</span></div>
+                </div>
+                <div class="social-row">
+                    <a href="#">in</a><a href="#">ig</a><a href="#">fb</a>
+                </div>
+            </div>
+            <div class="contact-map">Map embed placeholder</div>
+        </div>
+
+        <!-- Enquiry overlay + panel -->
+        <div class="enquiry-overlay" id="enquiryOverlay"></div>
+
+        <div class="enquiry-panel" id="enquiryPanel">
+            <button class="enquiry-close" id="enquiryClose">×</button>
+
+            <h2>Enquire Now</h2>
+            <p class="enquiry-subtext">Tell us a bit about what you're looking for.</p>
+
+            <form class="enquiry-form">
+                <label>
+                    Project
+                    <select name="project" required>
+                        <option value="" disabled selected>Select a project</option>
+                        <option value="ecr-grand-residency">ECR Grand Residency</option>
+                        <option value="palm-grove-villas">Palm Grove Villas</option>
+                        <option value="vandalur-hills-estate">Vandalur Hills Estate</option>
+                    </select>
+                </label>
+
+                <label>
+                    Full Name
+                    <input type="text" name="fullname" placeholder="Enter your full name" required>
+                </label>
+
+                <label>
+                    Phone Number
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </label>
+
+                <button type="submit" class="enquiry-submit">Submit Enquiry</button>
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 60);
+            });
+        </script>
+    </body>
+</html>

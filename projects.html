@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects — Walnut Live Space</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="Images/Nadivine-Logo1.png" alt="Nadivine Logo">
+            </a>
+            <ul class="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="#" id="enquireLink">Enquire</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-hero">
+            <p>PROJECTS</p>
+            <h1>Walnut Live Space, Phase I</h1>
+            <div class="subtext">An 18-acre gated plot development with 142 residential plots, an OSR park, and direct frontage onto the bypass road.</div>
+            <div class="badge-row">
+                <div class="badge">DTCP approved</div>
+                <div class="badge">RERA registered</div>
+                <div class="badge">Bank loans available</div>
+            </div>
+        </div>
+
+        <div class="section-heading" style="margin-top:60px;">
+            <p>GALLERY</p>
+            <h2>Site progress &amp; renders</h2>
+        </div>
+        <div class="gallery-grid">
+            <div style="background-image:url('Images/gallery-1.jpg')"></div>
+            <div style="background-image:url('Images/gallery-2.jpg')"></div>
+            <div style="background-image:url('Images/gallery-3.jpg')"></div>
+            <div style="background-image:url('Images/gallery-4.jpg')"></div>
+            <div style="background-image:url('Images/gallery-5.jpg')"></div>
+        </div>
+
+        <div class="section-heading" style="margin-top:80px;">
+            <p>SPECIFICATIONS</p>
+            <h2>Plot &amp; project details</h2>
+        </div>
+        <div class="spec-grid">
+            <div class="spec-card">
+                <h3>Project overview</h3>
+                <div class="spec-row"><span>Total land area</span><span>18 acres</span></div>
+                <div class="spec-row"><span>Total plots</span><span>142</span></div>
+                <div class="spec-row"><span>Plot range</span><span>1200–3600 sq.ft</span></div>
+            </div>
+            <div class="spec-card">
+                <h3>Infrastructure</h3>
+                <div class="spec-row"><span>Roads</span><span>Blacktop, tree-lined</span></div>
+                <div class="spec-row"><span>Drainage</span><span>Underground stormwater</span></div>
+                <div class="spec-row"><span>Security</span><span>Gated, 24/7 CCTV</span></div>
+            </div>
+            <div class="spec-card">
+                <h3>Approvals</h3>
+                <div class="spec-row"><span>DTCP No.</span><span>44/2026</span></div>
+                <div class="spec-row"><span>RERA No.</span><span>TNRERA/1/LO/xxxx/2026</span></div>
+            </div>
+        </div>
+
+        <div class="section-heading" style="margin-top:80px;">
+            <p>LOCATION</p>
+            <h2>Getting here</h2>
+        </div>
+        <div style="padding:0 8% 100px;">
+            <div class="contact-map">Map embed placeholder</div>
+        </div>
+
+        <!-- Enquiry overlay + panel -->
+        <div class="enquiry-overlay" id="enquiryOverlay"></div>
+
+        <div class="enquiry-panel" id="enquiryPanel">
+            <button class="enquiry-close" id="enquiryClose">×</button>
+
+            <h2>Enquire Now</h2>
+            <p class="enquiry-subtext">Tell us a bit about what you're looking for.</p>
+
+            <form class="enquiry-form">
+                <label>
+                    Project
+                    <select name="project" required>
+                        <option value="" disabled selected>Select a project</option>
+                        <option value="ecr-grand-residency">ECR Grand Residency</option>
+                        <option value="palm-grove-villas">Palm Grove Villas</option>
+                        <option value="vandalur-hills-estate">Vandalur Hills Estate</option>
+                    </select>
+                </label>
+
+                <label>
+                    Full Name
+                    <input type="text" name="fullname" placeholder="Enter your full name" required>
+                </label>
+
+                <label>
+                    Phone Number
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </label>
+
+                <button type="submit" class="enquiry-submit">Submit Enquiry</button>
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 60);
+            });
+        </script>
+    </body>
+</html>

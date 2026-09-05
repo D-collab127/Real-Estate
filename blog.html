@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog — Walnut Live Space</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="Images/Nadivine-Logo1.png" alt="Nadivine Logo">
+            </a>
+            <ul class="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="#" id="enquireLink">Enquire</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-hero">
+            <p>JOURNAL</p>
+            <h1>Notes on land, plots &amp; building well</h1>
+            <div class="subtext">Practical reading for anyone buying a residential plot for the first time.</div>
+        </div>
+
+        <div class="blog-filter">
+            <button class="active">All</button>
+            <button>Buying guide</button>
+            <button>Legal &amp; approvals</button>
+            <button>Community</button>
+        </div>
+
+        <div class="blog-grid">
+            <a class="blog-card" href="blog-post.html">
+                <img src="Images/blog-1.jpg" alt="">
+                <div class="blog-card-body">
+                    <span class="blog-cat">Buying guide</span>
+                    <h3>What DTCP approval actually protects you from</h3>
+                    <p>A plain-language walkthrough of what the approval covers.</p>
+                    <div class="blog-meta">6 min read · Aug 2026</div>
+                </div>
+            </a>
+            <a class="blog-card" href="blog-post.html">
+                <img src="Images/blog-2.jpg" alt="">
+                <div class="blog-card-body">
+                    <span class="blog-cat">Legal &amp; approvals</span>
+                    <h3>RERA registration, explained for first-time buyers</h3>
+                    <p>What the registration number actually guarantees.</p>
+                    <div class="blog-meta">5 min read · Jul 2026</div>
+                </div>
+            </a>
+            <a class="blog-card" href="blog-post.html">
+                <img src="Images/blog-3.jpg" alt="">
+                <div class="blog-card-body">
+                    <span class="blog-cat">Community</span>
+                    <h3>Why the avenue trees were planted before the roads</h3>
+                    <p>A look at the phased build-out at Walnut.</p>
+                    <div class="blog-meta">4 min read · Jul 2026</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Enquiry overlay + panel -->
+        <div class="enquiry-overlay" id="enquiryOverlay"></div>
+
+        <div class="enquiry-panel" id="enquiryPanel">
+            <button class="enquiry-close" id="enquiryClose">×</button>
+
+            <h2>Enquire Now</h2>
+            <p class="enquiry-subtext">Tell us a bit about what you're looking for.</p>
+
+            <form class="enquiry-form">
+                <label>
+                    Project
+                    <select name="project" required>
+                        <option value="" disabled selected>Select a project</option>
+                        <option value="ecr-grand-residency">ECR Grand Residency</option>
+                        <option value="palm-grove-villas">Palm Grove Villas</option>
+                        <option value="vandalur-hills-estate">Vandalur Hills Estate</option>
+                    </select>
+                </label>
+
+                <label>
+                    Full Name
+                    <input type="text" name="fullname" placeholder="Enter your full name" required>
+                </label>
+
+                <label>
+                    Phone Number
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </label>
+
+                <button type="submit" class="enquiry-submit">Submit Enquiry</button>
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 60);
+            });
+            document.querySelectorAll('.blog-filter button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.blog-filter button').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    // NOTE: placeholder — real filtering needs each .blog-card tagged
+                    // with a data-category attribute once posts come from a CMS.
+                });
+            });
+        </script>
+    </body>
+</html>

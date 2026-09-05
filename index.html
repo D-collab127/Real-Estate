@@ -8,11 +8,13 @@
     </head>
     <body>
         <nav class="navbar">
-            <a href="#" class="logo">Livin' Dream</a>
+            <a href="/" class="logo">
+                <img src="Images/Nadivine-Logo1.png" alt="Nadivine Logo">
+            </a>
             <ul class="menu-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <!-- <li><a href="#">Blogs</a></li> -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blogs</a></li>
                 <li><a href="#" id="enquireLink">Enquire</a></li>
             </ul>
         </nav>
@@ -21,11 +23,11 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
 
-                <p class="hero-label">CURATED LIVING SPACES</p>
+                <p class="hero-label">Crafting Spaces — Enriching Lives</p>
 
                 <h1>
-                    A PLACE TO<br>
-                    CALL YOUR OWN.
+                    Nexseon.<br>
+                    Walnut Live Space.
                 </h1>
 
                 <p class="hero-description">
@@ -104,7 +106,10 @@
             <h2>Enquire Now</h2>
             <p class="enquiry-subtext">Tell us a bit about what you're looking for.</p>
 
-            <form class="enquiry-form">
+            <form class="enquiry-form" id="enquiryForm">
+                <input type="hidden" name="access_key" value="0da82ad2-ba07-46fd-a868-610bf890441b">
+                <input type="hidden" name="subject" value="New enquiry — Walnut Live Space">
+
                 <label>
                     Project
                     <select name="project" required>
@@ -135,6 +140,12 @@
         </div>
 
         <script src="script.js"></script>
+        <script>
+            window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 60);
+            });
+        </script>
+        
     </body>
 </html>
         
